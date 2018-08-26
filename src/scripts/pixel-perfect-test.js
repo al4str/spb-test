@@ -3,6 +3,9 @@ window.onload = () => {
   const $cover = document.getElementById('cover');
   const $switch = document.getElementById('switch');
   const $opacity = document.getElementById('opacity');
+  if (!$cover || $switch || $opacity || window.Vue === undefined) {
+    return;
+  }
   new Vue({
     data: {
       isShown: $switch.checked,
