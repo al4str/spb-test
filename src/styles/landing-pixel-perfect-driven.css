@@ -1,3 +1,4 @@
+@import "../vendors/bootstrap-grid.min.css";
 .ppt-spacer {
   height: 8rem;
 }
@@ -1129,4 +1130,4 @@ body {
   }
 }
 
-/*# sourceMappingURL=landing-gridless-pixel-perfect-driven.css.map */
+/*# sourceMappingURL=landing-pixel-perfect-driven.css.map */

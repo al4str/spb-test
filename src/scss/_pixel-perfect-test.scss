@@ -1,13 +1,13 @@
 @import "media-mixin";
 
-.spacer {
+.ppt-spacer {
   height: 8rem;
   @include for-size(desktop-up) {
     height: 0;
   }
 }
 
-.cover {
+.ppt-cover {
   position: absolute;
   left: 0;
   top: 0;
@@ -29,7 +29,7 @@
   }
 }
 
-.pp {
+.ppt {
   position: fixed;
   left: 0.5rem;
   bottom: 0.5rem;
