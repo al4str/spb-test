@@ -1,7 +1,7 @@
 
 ## Checklist
 - landing markup (without any grid system; pixel perfect approach)
-- landing markup (bootstrap grid; pixel perfect approach)
+- landing markup (bootstrap grid)
 - landing markup (css grid; systematic approach)
 - ~~data-table markup (bootstrap lib; pixel perfect approach)~~
 - data-table markup (bootstrap lib; systematic approach)
