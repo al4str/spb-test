@@ -1,26 +1,27 @@
 
 ## Checklist
-- landing markup (without any grid system; pixel perfect approach)
-- landing markup (bootstrap grid)
-- landing markup (css grid; systematic approach)
-- data-table markup (bootstrap lib; systematic approach)
-- loop page controls and links with tab
-- check a11y tree (chrome devtools)
-- check middle breakpoints
-- check zooming behaviour
-- check text for mistakes
-- process text with [Typograf](https://www.artlebedev.ru/tools/typograf/)
-- prefix your code
-- minimize your code
-- get rid of source maps
-- use minified vendor libraries
-- optimize assets [`.png`](https://tinypng.com/), [`.jpeg`](https://tinyjpg.com/)
-- add `<linl rel="preload/preconnect" href="..." />` tags
-- ~~add meta tags [open graph](http://ogp.me/)~~
-- ~~add microdata [schema.org](https://schema.org/)~~
-- ~~check page in [PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/)~~
-- check page in lighthouse (chrome devtools)
-- check page on real mobile devices
-	- iOS
-	- ~~Android~~
-	- ~~Windows Phone~~
+
+markups | landing #1 | landing #2 | landing #3 | data table
+--- | :---: | :---: | :---: | :---:
+grid system | without any | bootstrap grid | css grid | ✖️
+approach | pixel-perfect | as is | systematic | ✖️
+loop through links/controls with tab | ✖️ | ✖️ | ✔️️ | ✖️
+check a11y tree (chrome devtools) | ✖️ | ✖️ | ✔️️ | ✖️
+check middle breakpoints | ✔️️ | ✔️ | ✔️️ | ✖️
+check zooming behaviour | ✖️ | ✖️ | ✔️️ | ✖️
+check text for mistakes | ✔️ | ✔️️ | ✔️️ | ✖️
+process text with [Typograf](https://www.artlebedev.ru/tools/typograf/) | ✔️️ | ✔️️ | ✔️️ | ✖️
+prefix your code | ✔️ | ✔️️ | ✔️️ | ✖️
+minimize your code | ✔️️ | ✔️️ | ✔️️ | ✖️
+get rid of source maps | ✔️️ | ✔️ | ✔️️ | ✖️
+use minified vendor libraries | ✔️️ | ✔️️ | ✔️️ | ✖️
+optimize assets [`.png`](https://tinypng.com/), [`.jpeg`](https://tinyjpg.com/) | ✔️ | ✔️️ | ✔️️ | ✖️
+add `<linl rel="preload/preconnect" href="..." />` tags | ✔️️ | ✔️ | ✔️️ | ✖️
+add meta tags [open graph](http://ogp.me/) | ✖️ | ✖️ | ✖️ | ✖️
+add microdata [schema.org](https://schema.org/) | ✖️ | ✖️ | ✖️ | ✖️
+check page in [PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/) | ✖️ | ✖️ | ✖️️️ | ✖️
+check page in lighthouse (chrome devtools) | ✖️ | ✖️ | ✔️️ | ✖️
+
+### Landing #3 lighthouse results
+
+![](https://github.com/al4str/spb-test/raw/master/lighthouse.jpg "lighthouse results")
