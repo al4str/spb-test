@@ -1,9 +1,14 @@
+const documentReady = () => new Promise((resolve) => {
+  document.readyState === 'complete' ?
+    resolve() :
+    window.addEventListener('load', resolve, true);
+});
 
-window.onload = () => {
+documentReady().then(() => {
   const $cover = document.getElementById('cover');
   const $switch = document.getElementById('switch');
   const $opacity = document.getElementById('opacity');
-  if (!$cover || $switch || $opacity || window.Vue === undefined) {
+  if (!$cover || !$switch || !$opacity || window.Vue === undefined) {
     return;
   }
   new Vue({
@@ -31,4 +36,4 @@ window.onload = () => {
       },
     },
   });
-};
+});
