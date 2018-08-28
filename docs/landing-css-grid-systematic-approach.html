@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="author" content="al4str" />
+  <title>My Amazing Landing Page</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link rel="preload" href="./styles/landing-css-grid-systematic-approach.css" as="style" />
+  <link rel="preload" href="./assets/promo-bg.jpg" as="image" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700" />
+  <link rel="stylesheet" href="./styles/landing-css-grid-systematic-approach.css" />
+</head>
+<body>
+<section
+  class="promo"
+  aria-labelledby="promo-title"
+  aria-describedby="promo-desc"
+>
+  <div class="promo__effects" role="presentation"></div>
+  <header class="container header promo__header" role="presentation">
+    <div class="brand header__brand" aria-label="Dreamshare">
+      <span class="brand__name">
+        Dreamshare
+      </span>
+    </div>
+    <div class="user header__user">
+      <button
+        class="btn btn_basic user__log-in"
+        type="button"
+      >
+        Log in
+      </button>
+      <button
+        class="btn btn_ghost user__sign-up"
+        type="button"
+      >
+        Sign up
+      </button>
+    </div>
+  </header>
+  <div class="promo__wrp" role="presentation">
+    <h1 class="promo__heading" id="promo-title">
+      Share your holiday dream
+    </h1>
+    <p class="promo__desc" id="promo-desc">
+      And find the prefect partner to&nbsp;fulfill it
+    </p>
+    <button
+      class="btn btn_cta promo__action"
+      type="button"
+    >
+      Find your holiday partner
+    </button>
+  </div>
+</section>
+<section class="container steps" aria-labelledby="steps-title">
+  <h2 class="heading steps__heading" id="steps-title">
+    How Dreamshare works?
+  </h2>
+  <ol class="steps__list" aria-label="Steps to get started">
+    <li
+      class="steps__item steps__item_1"
+      aria-labelledby="step-1-title"
+      aria-describedby="step-1-desc"
+    >
+      <div class="steps__item-effects" role="presentation"></div>
+      <div class="steps__item-wrp" role="presentation">
+        <span class="steps__item-badge">Step 1</span>
+        <h3 class="steps__item-heading" id="step-1-title">
+          Sed leo enim, condimentum
+        </h3>
+        <p class="steps__item-desc" id="step-1-desc">
+          Quisque libero libero, dictum non turpis&nbsp;in, luctus semper lorem. Donec rhonus a&nbsp;leo sit amet
+          facilisis.
+        </p>
+      </div>
+    </li>
+    <li
+      class="steps__item steps__item_2"
+      aria-labelledby="step-2-title"
+      aria-describedby="step-2-desc"
+    >
+      <div class="steps__item-effects" role="presentation"></div>
+      <div class="steps__item-wrp" role="presentation">
+        <span class="steps__item-badge">Step 2</span>
+        <h3 class="steps__item-heading" id="step-2-title">
+          Morbi velit risus
+        </h3>
+        <p class="steps__item-desc" id="step-2-desc">
+          Nulla venenatis tempor dui in&nbsp;molestie. Nulla quis dictum purus, sit amet porttitor est.
+        </p>
+      </div>
+    </li>
+    <li
+      class="steps__item steps__item_3"
+      aria-labelledby="step-3-title"
+      aria-describedby="step-3-desc"
+    >
+      <div class="steps__item-effects" role="presentation"></div>
+      <div class="steps__item-wrp" role="presentation">
+        <span class="steps__item-badge">Step 3</span>
+        <h3 class="steps__item-heading" id="step-3-title">
+          Sed leo enim, condimentum
+        </h3>
+        <p class="steps__item-desc" id="step-3-desc">
+          Quisque libero libero, dictum non turpis&nbsp;in, luctus semper lorem. Donec rhonus a&nbsp;leo sit amet
+          facilisis.
+        </p>
+      </div>
+    </li>
+  </ol>
+</section>
+<section class="container partners" aria-labelledby="partners-title">
+  <h2 class="heading partners__heading" id="partners-title">
+    Meet a&nbsp;partner for you best holiday
+  </h2>
+  <ul class="partners__list" aria-label="Some of our friends">
+    <li
+      class="partners__person"
+      aria-labelledby="partner-1-title"
+      aria-describedby="partner-1-about"
+    >
+      <div class="partners__photo" role="presentation">
+        <img
+          class="partners__photo-img"
+          src="./assets/partners-img-1.jpg"
+          alt="Bradley Hunter's photo"
+        />
+        <i class="partners__icon partners__icon_music" aria-hidden="true"></i>
+      </div>
+      <span class="partners__name" id="partner-1-title" role="presentation">
+        Bradley Hunter
+      </span>
+      <p class="partners__about" id="partner-1-about">
+        Based in&nbsp;Chicago. I&nbsp;love playing tennis and loud music.
+      </p>
+    </li>
+    <li
+      class="partners__person"
+      aria-labelledby="partner-2-title"
+      aria-describedby="partner-2-about"
+    >
+      <div class="partners__photo" role="presentation">
+        <img
+          class="partners__photo-img"
+          src="./assets/partners-img-2.jpg"
+          alt="Marie Bennett's photo"
+        />
+        <i class="partners__icon partners__icon_brash" aria-hidden="true"></i>
+      </div>
+      <span class="partners__name" id="partner-2-title" role="presentation">
+        Marie Bennett
+      </span>
+      <p class="partners__about" id="partner-2-about">
+        Currently living in&nbsp;Colorado. Lover of&nbsp;art, languages and travelling.
+      </p>
+    </li>
+    <li
+      class="partners__person"
+      aria-labelledby="partner-3-title"
+      aria-describedby="partner-3-about"
+    >
+      <div class="partners__photo" role="presentation">
+        <img
+          class="partners__photo-img"
+          src="./assets/partners-img-3.jpg"
+          alt="Diana Wells's photo"
+        />
+        <i class="partners__icon partners__icon_camera" aria-hidden="true"></i>
+      </div>
+      <span class="partners__name" id="partner-3-title" role="presentation">
+        Diana Wells
+      </span>
+      <p class="partners__about" id="partner-3-about">
+        Living in&nbsp;Athens, Greece. I&nbsp;love black and white classics, chillout music and green tea.
+      </p>
+    </li>
+    <li
+      class="partners__person"
+      aria-labelledby="partner-4-title"
+      aria-describedby="partner-4-about"
+    >
+      <div class="partners__photo" role="presentation">
+        <img
+          class="partners__photo-img"
+          src="./assets/partners-img-4.jpg"
+          alt="Christopher Pierce's photo"
+        />
+        <i class="partners__icon partners__icon_plane" aria-hidden="true"></i>
+      </div>
+      <span class="partners__name" id="partner-4-title" role="presentation">
+        Christopher Pierce
+      </span>
+      <p class="partners__about" id="partner-4-about">
+        Star Wars fanatic. I&nbsp;have a&nbsp;persistent enthusiasm to&nbsp;create new things.
+      </p>
+    </li>
+  </ul>
+  <div class="partners__actions" role="presentation">
+    <a
+      class="btn btn_ghost-cta partners__action"
+      href="javascript:void(0);"
+    >
+      See other partners
+    </a>
+  </div>
+</section>
+<section class="container ideas" aria-labelledby="ideas-title">
+  <h2 class="heading ideas__heading" id="ideas-title">
+    Discover holiday activity&nbsp;ideas
+  </h2>
+  <ul class="ideas__list" aria-label="Some of our ideas">
+    <li class="ideas__idea ideas__idea_sports" aria-labelledby="idea-1-label">
+      <div class="ideas__idea-effects" role="presentation"></div>
+      <span class="ideas__idea-cap" id="idea-1-label" role="presentation">
+        Sports and Activity
+      </span>
+    </li>
+    <li class="ideas__idea ideas__idea_health" aria-labelledby="idea-2-label">
+      <div class="ideas__idea-effects" role="presentation"></div>
+      <span class="ideas__idea-cap" id="idea-2-label" role="presentation">
+        Wellness and Health
+      </span>
+    </li>
+    <li class="ideas__idea ideas__idea_expeditions" aria-labelledby="idea-3-label">
+      <div class="ideas__idea-effects" role="presentation"></div>
+      <span class="ideas__idea-cap" id="idea-3-label" role="presentation">
+        Extreme Sports and&nbsp;Expeditions
+      </span>
+    </li>
+    <li class="ideas__idea ideas__idea_games" aria-labelledby="idea-4-label">
+      <div class="ideas__idea-effects" role="presentation"></div>
+      <span class="ideas__idea-cap" id="idea-4-label" role="presentation">
+        Games
+      </span>
+    </li>
+    <li class="ideas__idea ideas__idea_education ideas__idea_doubled" aria-labelledby="idea-5-label">
+      <div class="ideas__idea-effects" role="presentation"></div>
+      <span class="ideas__idea-cap" id="idea-5-label" role="presentation">
+        Culture and Education
+      </span>
+    </li>
+    <li class="ideas__idea ideas__idea_relaxation ideas__idea_doubled" aria-labelledby="idea-6-label">
+      <div class="ideas__idea-effects" role="presentation"></div>
+      <span class="ideas__idea-cap" id="idea-6-label" role="presentation">
+        Enjoyment and Relaxation
+      </span>
+    </li>
+    <li class="ideas__idea ideas__idea_travelling" aria-labelledby="idea-7-label">
+      <div class="ideas__idea-effects" role="presentation"></div>
+      <span class="ideas__idea-cap" id="idea-7-label" role="presentation">
+        Travelling
+      </span>
+    </li>
+  </ul>
+</section>
+<section class="container action" aria-labelledby="action-title">
+  <h2 class="heading action__heading" id="action-title">
+    Create your holiday activity
+  </h2>
+  <div class="action__wrp" role="presentation">
+    <form
+      class="action__form"
+      action="javascript:void(0);"
+      method="post"
+      aria-labelledby="action-label"
+    >
+      <fieldset class="action__form-set" role="presentation">
+        <legend class="action__form-caption" id="action-label">
+          Hi! What are your holiday interests?
+        </legend>
+        <div class="action__form-field-group">
+          <label
+            class="visually-hidden"
+            for="interests"
+          >
+            Your interests
+          </label>
+          <input
+            class="field action__interests"
+            placeholder="Enter your interests"
+            id="interests"
+            name="interests"
+          />
+          <button
+            class="btn btn_cta action__submit"
+            type="submit"
+          >
+            Search partners
+          </button>
+        </div>
+      </fieldset>
+    </form>
+  </div>
+</section>
+<footer class="footer">
+  <div class="container footer__wrp" role="presentation">
+    <div class="brand footer__brand" aria-hidden="true">
+      <span class="brand__name">
+        Dreamshare
+      </span>
+    </div>
+    <nav class="navigation footer__nav-1" aria-labelledby="nav-company">
+      <h4 class="navigation__heading" id="nav-company">
+        Company
+      </h4>
+      <ul class="navigation__list" aria-label="Company links">
+        <li class="navigation__item">
+          <a
+            class="link"
+            href="javascript:void(0);"
+          >
+            About
+          </a>
+        </li>
+        <li class="navigation__item">
+          <a
+            class="link"
+            href="javascript:void(0);"
+          >
+            Contacts
+          </a>
+        </li>
+        <li class="navigation__item">
+          <a
+            class="link"
+            href="javascript:void(0);"
+          >
+            Press
+          </a>
+        </li>
+        <li class="navigation__item">
+          <a
+            class="link"
+            href="javascript:void(0);"
+          >
+            Blog
+          </a>
+        </li>
+        <li class="navigation__item">
+          <a
+            class="link"
+            href="javascript:void(0);"
+          >
+            Terms and Privacy
+          </a>
+        </li>
+        <li class="navigation__item">
+          <a
+            class="link"
+            href="javascript:void(0);"
+          >
+            Help
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <nav class="navigation footer__nav-2" aria-labelledby="nav-partners">
+      <h4 class="navigation__heading" id="nav-partners">
+        Partners
+      </h4>
+    </nav>
+    <div class="by footer__by" aria-label="Designed by Areto Development">
+      <span class="by__cap" aria-hidden="true">
+        Designed by
+      </span>
+      <img
+        class="by__logo"
+        src="./assets/areto-development-logo.png"
+        alt="Areto Development logotype"
+      />
+    </div>
+  </div>
+</footer>
+</body>
+</html>
