@@ -1,7 +1,7 @@
 
 ## Checklist
 
-markups | landing #1 | landing #2 | landing #3 | data table
+markups | [landing #1](https://al4str.github.io/spb-test/landing-gridless-pixel-perfect-approach.html) | [landing #2](https://al4str.github.io/spb-test/landing-bootstrap-grid.html) | [landing #3](https://al4str.github.io/spb-test/landing-css-grid-systematic-approach.html) | data table
 --- | :---: | :---: | :---: | :---:
 grid system | without any | bootstrap grid | css grid | ✖️
 approach | pixel-perfect | as is | systematic | ✖️
