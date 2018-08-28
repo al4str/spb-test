@@ -1,12 +1,228 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <title>Le Table</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="author" content="al4str" />
+  <title>Le Table of Data</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link rel="preload" href="./vendors/bootstrap-reboot.min.css" as="style" />
+  <link rel="preload" href="./vendors/bootstrap.min.css" as="style" />
+  <link rel="preload" href="./styles/table.css" as="style" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700" />
+  <link rel="stylesheet" href="./vendors/bootstrap-reboot.min.css" />
+  <link rel="stylesheet" href="./vendors/bootstrap.min.css" />
+  <link rel="stylesheet" href="./styles/table.css" />
 </head>
 <body>
-
-<script defer src="./jquery-3.3.1.slim.min.js"></script>
-<script defer src="./popper-1.14.3.min.js"></script>
+<div class="wrp">
+  <div>
+    <div>
+      S&eacute;lectionner toutes les lignes
+      Exporter le tableau
+      Param&eacute;trer le tableau
+    </div>
+    <table class="table wrp__table">
+      <thead>
+      <tr>
+        <th scope="col">
+          Nom de bi&eacute;re
+          Placeholder
+        </th>
+        <th scope="col">
+          Placeholder
+          - S&eacute;lectionner -
+        </th>
+        <th scope="col">
+          Statut
+          - S&eacute;lectionner -
+        </th>
+        <th scope="col">
+          Type de conditionnement
+          Placeholder
+        </th>
+        <th scope="col">
+          Fournisseur
+          10/07/2018
+        </th>
+        <th scope="col">
+          R&eacute;ception pr&eacute;vue le
+          Placeholder
+        </th>
+        <th scope="col">
+          Quantit&eacute;s command&eacute;es
+          Placeholder
+        </th>
+        <th scope="col">
+          Actions
+        </th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>
+          Adelscott
+        </td>
+        <td>
+          Actif
+        </td>
+        <td>
+          F&ucirc;t
+        </td>
+        <td>
+          Divers
+        </td>
+        <td>
+          11/07/2018
+        </td>
+        <td>
+          CDRVJ1
+        </td>
+        <td>
+          100
+        </td>
+        <td>
+          ...
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Sainte cru
+        </td>
+        <td>
+          En cours
+        </td>
+        <td>
+          Bouteille 33Cl
+        </td>
+        <td>
+          Divers
+        </td>
+        <td>
+          11/07/2018
+        </td>
+        <td>
+          CDRVJ
+        </td>
+        <td>
+          100
+        </td>
+        <td>...</td>
+      </tr>
+      <tr>
+        <td>
+          Matten
+        </td>
+        <td>
+          Suspendu&hellip;
+        </td>
+        <td>
+          Ft
+        </td>
+        <td>
+          Divers
+        </td>
+        <td>
+          11/07/2018
+        </td>
+        <td>
+          CDRJRE1
+        </td>
+        <td>
+          120
+        </td>
+        <td>...</td>
+      </tr>
+      <tr>
+        <td>
+          La giffle
+        </td>
+        <td>
+          Actif
+        </td>
+        <td>
+          Bouteille 33Cl
+        </td>
+        <td>
+          Divers
+        </td>
+        <td>
+          11/07/2018
+        </td>
+        <td>
+          CDRJRE
+        </td>
+        <td>
+          100
+        </td>
+        <td>...</td>
+      </tr>
+      <tr>
+        <td>
+          Rochefort 6
+        </td>
+        <td>
+          Actif
+        </td>
+        <td>
+          Ft
+        </td>
+        <td>
+          Divers
+        </td>
+        <td>
+          11/07/2018
+        </td>
+        <td>
+          CDRJJR1
+        </td>
+        <td>
+          100
+        </td>
+        <td>...</td>
+      </tr>
+      <tr>
+        <td>
+          Kro
+        </td>
+        <td>
+          Actif
+        </td>
+        <td>
+          Ft
+        </td>
+        <td>
+          Divers
+        </td>
+        <td>
+          11/07/2018
+        </td>
+        <td>
+          CDRJJR
+        </td>
+        <td>
+          100
+        </td>
+        <td>...</td>
+      </tr>
+      </tbody>
+      <tfoot>
+      <tr>
+        <td colspan="7">
+          X rsultats
+          Afficher : 1
+          1 2 &hellip; 4 5
+          Aller &agrave; la page : 10
+        </td>
+      </tr>
+      </tfoot>
+    </table>
+  </div>
+</div>
+<script defer src="./vendors/jquery-3.3.1.slim.min.js"></script>
+<script defer src="./vendors/popper-1.14.3.min.js"></script>
+<script defer src="./vendors/bootstrap.min.js"></script>
+<script defer src="./scripts/table.js"></script>
 </body>
 </html>
