@@ -3,7 +3,6 @@
 - landing markup (without any grid system; pixel perfect approach)
 - landing markup (bootstrap grid)
 - landing markup (css grid; systematic approach)
-- ~~data-table markup (bootstrap lib; pixel perfect approach)~~
 - data-table markup (bootstrap lib; systematic approach)
 - loop page controls and links with tab
 - check a11y tree (chrome devtools)
@@ -19,7 +18,7 @@
 - add `<linl rel="preload/preconnect" href="..." />` tags
 - ~~add meta tags [open graph](http://ogp.me/)~~
 - ~~add microdata [schema.org](https://schema.org/)~~
-- check page in [PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/)
+- ~~check page in [PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/)~~
 - check page in lighthouse (chrome devtools)
 - check page on real mobile devices
 	- iOS
