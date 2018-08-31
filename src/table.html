@@ -2,227 +2,363 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=1440, initial-scale=1" />
   <meta name="author" content="al4str" />
   <title>Le Table of Data</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" />
   <link rel="preload" href="./vendors/bootstrap-reboot.min.css" as="style" />
   <link rel="preload" href="./vendors/bootstrap.min.css" as="style" />
   <link rel="preload" href="./styles/table.css" as="style" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700" />
   <link rel="stylesheet" href="./vendors/bootstrap-reboot.min.css" />
   <link rel="stylesheet" href="./vendors/bootstrap.min.css" />
   <link rel="stylesheet" href="./styles/table.css" />
 </head>
 <body>
-<div class="wrp">
-  <div>
-    <div>
-      S&eacute;lectionner toutes les lignes
-      Exporter le tableau
-      Param&eacute;trer le tableau
+<div id="app"></div>
+<script type="text/x-template" id="table-top-template">
+  <header class="top">
+    <div class="form-check d-inline-flex">
+      <label class="form-check-label top__check-label" for="check-all">
+        S&eacute;lectionner toutes les lignes
+      </label>
+      <input
+        class="form-check-input"
+        type="checkbox"
+        id="check-all"
+        @change="$emit('check-all', $event.target.checked)"
+      />
     </div>
-    <table class="table wrp__table">
-      <thead>
-      <tr>
-        <th scope="col">
-          Nom de bi&eacute;re
-          Placeholder
-        </th>
-        <th scope="col">
-          Placeholder
-          - S&eacute;lectionner -
-        </th>
-        <th scope="col">
-          Statut
-          - S&eacute;lectionner -
-        </th>
-        <th scope="col">
-          Type de conditionnement
-          Placeholder
-        </th>
-        <th scope="col">
-          Fournisseur
-          10/07/2018
-        </th>
-        <th scope="col">
-          R&eacute;ception pr&eacute;vue le
-          Placeholder
-        </th>
-        <th scope="col">
-          Quantit&eacute;s command&eacute;es
-          Placeholder
-        </th>
-        <th scope="col">
-          Actions
-        </th>
-      </tr>
-      </thead>
-      <tbody>
-      <tr>
-        <td>
-          Adelscott
-        </td>
-        <td>
-          Actif
-        </td>
-        <td>
-          F&ucirc;t
-        </td>
-        <td>
-          Divers
-        </td>
-        <td>
-          11/07/2018
-        </td>
-        <td>
-          CDRVJ1
-        </td>
-        <td>
-          100
-        </td>
-        <td>
-          ...
-        </td>
-      </tr>
-      <tr>
-        <td>
-          Sainte cru
-        </td>
-        <td>
-          En cours
-        </td>
-        <td>
-          Bouteille 33Cl
-        </td>
-        <td>
-          Divers
-        </td>
-        <td>
-          11/07/2018
-        </td>
-        <td>
-          CDRVJ
-        </td>
-        <td>
-          100
-        </td>
-        <td>...</td>
-      </tr>
-      <tr>
-        <td>
-          Matten
-        </td>
-        <td>
-          Suspendu&hellip;
-        </td>
-        <td>
-          Ft
-        </td>
-        <td>
-          Divers
-        </td>
-        <td>
-          11/07/2018
-        </td>
-        <td>
-          CDRJRE1
-        </td>
-        <td>
-          120
-        </td>
-        <td>...</td>
-      </tr>
-      <tr>
-        <td>
-          La giffle
-        </td>
-        <td>
-          Actif
-        </td>
-        <td>
-          Bouteille 33Cl
-        </td>
-        <td>
-          Divers
-        </td>
-        <td>
-          11/07/2018
-        </td>
-        <td>
-          CDRJRE
-        </td>
-        <td>
-          100
-        </td>
-        <td>...</td>
-      </tr>
-      <tr>
-        <td>
-          Rochefort 6
-        </td>
-        <td>
-          Actif
-        </td>
-        <td>
-          Ft
-        </td>
-        <td>
-          Divers
-        </td>
-        <td>
-          11/07/2018
-        </td>
-        <td>
-          CDRJJR1
-        </td>
-        <td>
-          100
-        </td>
-        <td>...</td>
-      </tr>
-      <tr>
-        <td>
-          Kro
-        </td>
-        <td>
-          Actif
-        </td>
-        <td>
-          Ft
-        </td>
-        <td>
-          Divers
-        </td>
-        <td>
-          11/07/2018
-        </td>
-        <td>
-          CDRJJR
-        </td>
-        <td>
-          100
-        </td>
-        <td>...</td>
-      </tr>
-      </tbody>
-      <tfoot>
-      <tr>
-        <td colspan="7">
-          X rsultats
-          Afficher : 1
-          1 2 &hellip; 4 5
-          Aller &agrave; la page : 10
-        </td>
-      </tr>
-      </tfoot>
-    </table>
+    <div class="btn-group ml-auto mr-4">
+      <button
+        class="btn btn-link p-0 top__export-cap"
+        type="button"
+        data-toggle="dropdown"
+        aria-haspopup="true"
+        aria-expanded="false"
+      >
+        <span class="btn-content">
+          <i class="icon icon_download btn-content__icon"></i>
+          <span class="btn-content__cap">
+            Exporter le tableau
+          </span>
+        </span>
+      </button>
+      <div class="dropdown-menu dropdown-menu-right">
+        <button class="dropdown-item" type="button">
+          JSON
+        </button>
+        <button class="dropdown-item" type="button">
+          XML
+        </button>
+        <button class="dropdown-item" type="button">
+          SQL
+        </button>
+        <button class="dropdown-item" type="button">
+          CSV
+        </button>
+        <button class="dropdown-item" type="button">
+          XLS
+        </button>
+      </div>
+    </div>
+    <div class="btn-group">
+      <button
+        class="btn btn-link p-0 top__settings-cap"
+        type="button"
+        data-toggle="dropdown"
+        aria-haspopup="true"
+        aria-expanded="false"
+      >
+        <span class="btn-content">
+          <i class="icon icon_gear btn-content__icon"></i>
+          <span class="btn-content__cap">
+            Param&eacute;trer le tableau
+          </span>
+        </span>
+      </button>
+      <div class="dropdown-menu dropdown-menu-right">
+        <button class="dropdown-item" type="button">
+          Quelqu'un m'a
+        </button>
+        <button class="dropdown-item" type="button">
+          Dit une fois
+        </button>
+        <button class="dropdown-item" type="button">
+          Que le monde va me rouler
+        </button>
+      </div>
+    </div>
+  </header>
+</script>
+<script type="text/x-template" id="table-head-template">
+  <thead>
+  <tr>
+    <th
+      class="align-top"
+      scope="col"
+      v-for="column in columns"
+      :key="`label-${column.name}`"
+      :class="`column-${column.name}`"
+    >
+      <div class="d-flex align-items-start">
+        <label
+          class="mb-0"
+          :for="column.name"
+        >
+          {{ column.cap }}
+        </label>
+        <button
+          class="btn ml-auto sort-btn"
+          type="button"
+          v-if="typeof column.sortType !== 'undefined'"
+          :data-sort="column.sortType"
+          @click="$emit('sort', column.name)"
+        >
+          <span class="btn-content">
+            <span class="sort-btn__down">&darr;</span>
+            <span class="sort-btn__up">&uarr;</span>
+          </span>
+        </button>
+      </div>
+    </th>
+  </tr>
+  <tr>
+    <th
+      class="pt-0"
+      scope="col"
+      v-for="column in columns"
+      :key="`input-${column.name}`"
+      :class="`column-${column.name}`"
+    >
+      <span v-if="column.name === 'actions'"></span>
+      <select
+        class="form-control"
+        v-else-if="column.name === 'status' || column.name === 'packageType'"
+        title=""
+        :id="column.name"
+        :value="column.filterValue"
+        @change="$emit('filter', column.name, $event.target.value)"
+      >
+        <option value="">- S&eacute;lectionner -</option>
+        <option
+          v-for="(value, key) in selects[column.name]"
+          :value="key"
+        >
+          {{ value }}
+        </option>
+      </select>
+      <input
+        class="form-control"
+        id="name"
+        placeholder="Taper pour filtrer.."
+        autocomplete="off"
+        v-else
+        :type="column.inputType"
+        :min="column.inputType === 'date' && '2019-01-14'"
+        :step="column.inputType === 'number' && '10'"
+        :value="column.filterValue"
+        @input="$emit('filter', column.name, $event.target.value)"
+      />
+    </th>
+  </tr>
+  </thead>
+</script>
+<script type="text/x-template" id="table-body-template">
+  <tbody>
+  <tr v-if="currentPageItems.length === 0">
+    <td colspan="8">
+      <p class="my-0 text-center">
+        <span v-if="isPending">
+          Chargement..
+        </span>
+        <span v-else>
+          Pas de donn&eacute;es
+        </span>
+      </p>
+    </td>
+  </tr>
+  <tr
+    v-else
+    v-for="item in currentPageItems"
+    :key="item.id"
+  >
+    <td class="column-name">
+      <div class="d-inline-flex align-items-center">
+        <label class="form-check m-0 p-0">
+          <input
+            class="form-check-input position-static m-0"
+            type="checkbox"
+            :checked="item.isChecked"
+            @change="$emit('check-item', item.id, $event.target.checked)"
+          />
+        </label>
+        <div class="btn-group dropright">
+          <button
+            class="btn btn-link p-0 ml-2"
+            type="button"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+            :title="item.name"
+          >
+            <span class="btn-content">
+              <i class="icon icon_dropdown btn-content__icon"></i>
+              <span class="text-truncate btn-content__cap">
+                {{ item.name }}
+              </span>
+            </span>
+          </button>
+          <div class="dropdown-menu dropdown-menu-right">
+            <button class="dropdown-item" type="button">
+              Tu es d&eacute;j&agrave; mort
+            </button>
+            <button class="dropdown-item" type="button">
+              Quelle
+            </button>
+          </div>
+        </div>
+      </div>
+    </td>
+    <td class="text-center column-status">
+      <span :class="'status status_' + item.status">
+        {{ statusesMap[item.status] }}
+      </span>
+    </td>
+    <td class="column-packageType" :title="packagesTypesMap[item.packageType]">
+      <span class="text-truncate">
+        {{ packagesTypesMap[item.packageType] }}
+      </span>
+    </td>
+    <td class="column-provider" :title="item.provider">
+      <span class="text-truncate">
+        {{ item.provider }}
+      </span>
+    </td>
+    <td class="column-plannedOn">
+      {{ new Date(item.plannedOn).toLocaleDateString('fr-FR') }}
+    </td>
+    <td class="column-reference">
+      {{ item.reference }}
+    </td>
+    <td class="text-right column-amountOrdered">
+      {{ item.amountOrdered }}
+    </td>
+    <td class="column-actions">
+      <div class="btn-group">
+        <button
+          class="btn more-btn"
+          type="button"
+          data-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false"
+        >
+          <span class="btn-content">
+            <i class="icon icon_more btn-content__icon"></i>
+          </span>
+        </button>
+        <div class="dropdown-menu dropdown-menu-right">
+          <button class="dropdown-item" type="button">
+            Copie
+          </button>
+          <button class="dropdown-item" type="button">
+            Modifier
+          </button>
+          <button class="dropdown-item" type="button">
+            Effacer
+          </button>
+        </div>
+      </div>
+    </td>
+  </tr>
+  </tbody>
+</script>
+<script type="text/x-template" id="table-foot-template">
+  <footer class="foot">
+    <span class="mr-4">
+      <span class="font-weight-bold">{{ itemsAmount }}</span> r&eacute;sultats
+    </span>
+    <label class="mb-0 mr-2" for="amount">Afficher:</label>
+    <select
+      class="form-control amount-select mr-4"
+      id="amount"
+      :value="perPageAmount"
+      @change="$emit('set-per-page-amount', $event.target.value)"
+    >
+      <option value="6">6</option>
+      <option value="9">9</option>
+      <option value="12">12</option>
+      <option value="24">24</option>
+      <option value="48">48</option>
+      <option value="96">96</option>
+    </select>
+    <nav class="d-inline mr-4">
+      <ul class="pagination d-inline-flex mb-0">
+        <li
+          class="page-item"
+          v-for="page in pagination"
+          :key="page.key"
+          :class="{ disabled: page.disabled, active: page.current }"
+        >
+          <button
+            class="page-link"
+            type="button"
+            :disabled="page.disabled || page.current"
+            @click="$emit('go-to-page', page.to)"
+          >
+            {{ page.cap }}
+          </button>
+        </li>
+      </ul>
+    </nav>
+    <label class="mb-0 mr-2" for="goto">Aller &agrave; la page:</label>
+    <select
+      class="form-control goto-select"
+      id="goto"
+      :value="currentPage"
+      @change="$emit('go-to-page', $event.target.value)"
+    >
+      <option
+        v-for="option in pagesArray"
+        :value="option"
+      >
+        {{ option }}
+      </option>
+    </select>
+  </footer>
+</script>
+<script type="text/x-template" id="app-template">
+  <div class="app">
+    <div class="app__cell">
+      <main class="app__content">
+        <table-top
+          @check-all="checkAll"
+        ></table-top>
+        <table class="table">
+          <table-head
+            :columns="columns"
+            @sort="applySort"
+            @filter="applyFilter"
+          ></table-head>
+          <table-body
+            :isPending="isPending"
+            :currentPageItems="currentPageItems"
+            @check-item="checkItem"
+          ></table-body>
+        </table>
+        <table-foot
+          :currentPage="currentPage"
+          :perPageAmount="perPageAmount"
+          :itemsAmount="filteredItems.length"
+          @go-to-page="goToPage"
+          @set-per-page-amount="setPerPageAmount"
+        ></table-foot>
+      </main>
+    </div>
   </div>
-</div>
+</script>
 <script defer src="./vendors/jquery-3.3.1.slim.min.js"></script>
 <script defer src="./vendors/popper-1.14.3.min.js"></script>
 <script defer src="./vendors/bootstrap.min.js"></script>
+<script defer src="./vendors/vue-2.5.17.min.js"></script>
 <script defer src="./scripts/table.js"></script>
 </body>
 </html>
