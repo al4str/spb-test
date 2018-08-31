@@ -1,3 +1,4 @@
+
 const documentReady = () => new Promise((resolve) => {
   document.readyState === 'complete' ?
     resolve() :
