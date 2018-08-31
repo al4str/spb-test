@@ -6,3 +6,5 @@ rm -rf ./docs/styles/*
 npx sass --no-source-map -s compressed -c ./docs/scss:./docs/styles
 npx postcss ./docs/styles/*.css -u autoprefixer -r --verbose --no-map
 rm -rf ./docs/scss
+mkdir ./docs/data
+cp ./data/data.json ./docs/data/
