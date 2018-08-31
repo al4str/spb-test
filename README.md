@@ -9,20 +9,20 @@
 
 ## Checklist
 
-markups | [landing #1](https://al4str.github.io/spb-test/landing-gridless-pixel-perfect-approach.html) | [landing #2](https://al4str.github.io/spb-test/landing-bootstrap-grid.html) | [landing #3](https://al4str.github.io/spb-test/landing-css-grid-systematic-approach.html) | data table
+markups | [landing #1](https://al4str.github.io/spb-test/landing-gridless-pixel-perfect-approach.html) | [landing #2](https://al4str.github.io/spb-test/landing-bootstrap-grid.html) | [landing #3](https://al4str.github.io/spb-test/landing-css-grid-systematic-approach.html) | [data table](https://al4str.github.io/spb-test/table.html)
 --- | :---: | :---: | :---: | :---:
-grid system | without any | bootstrap grid | css grid | ✖️
-approach | pixel-perfect | as is | systematic | ✖️
-loop through links/controls with tab | ✖️ | ✖️ | ✔️️ | ✖️
+grid system | without any | bootstrap grid | css grid | just a table
+approach | pixel-perfect | as is | systematic | as is
+loop through links/controls with tab | ✖️ | ✖️ | ✔️️ | ✔️
 check a11y tree (chrome devtools) | ✖️ | ✖️ | ✔️️ | ✖️
 check middle breakpoints | ✔️️ | ✔️ | ✔️️ | ✖️
 check zooming behaviour | ✖️ | ✖️ | ✔️️ | ✖️
 check text for mistakes | ✔️ | ✔️️ | ✔️️ | ✖️
 process text with [Typograf](https://www.artlebedev.ru/tools/typograf/) | ✔️️ | ✔️️ | ✔️️ | ✖️
-prefix your code | ✔️ | ✔️️ | ✔️️ | ✖️
-minimize your code | ✔️️ | ✔️️ | ✔️️ | ✖️
-get rid of source maps | ✔️️ | ✔️ | ✔️️ | ✖️
-use minified vendor libraries | ✔️️ | ✔️️ | ✔️️ | ✖️
+prefix css | ✔️ | ✔️️ | ✔️️ | ✔️
+minimize css | ✔️️ | ✔️️ | ✔️️ | ✔️️
+get rid of css source maps | ✔️️ | ✔️ | ✔️️ | ✔️
+use minified vendor libraries | ✔️️ | ✔️️ | ✔️️ | ✔️️
 optimize assets [`.png`](https://tinypng.com/), [`.jpeg`](https://tinyjpg.com/) | ✔️ | ✔️️ | ✔️️ | ✖️
 add `<linl rel="preload/preconnect" href="..." />` tags | ✔️️ | ✔️ | ✔️️ | ✖️
 add meta tags [open graph](http://ogp.me/) | ✖️ | ✖️ | ✖️ | ✖️
