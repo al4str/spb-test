@@ -8,27 +8,8 @@ const obtainData = () => {
   return new Promise((resolve) => {
     const url = location.protocol === 'file:' ?
       'http://localhost:5005' :
-      '/data/data.json';
+      '/spb-test/data/data.json';
     fetch(url)
-    .then((response) => {
-      const reader = response.body.getReader();
-      const stream = new ReadableStream({
-        start(controller) {
-          const push = () => {
-            reader.read().then(({ done, value }) => {
-              if (done) {
-                controller.close();
-                return;
-              }
-              controller.enqueue(value);
-              push();
-            });
-          };
-          push();
-        },
-      });
-      return new Response(stream);
-    })
     .then(response => response.json())
     .then(data => resolve(data));
   });
